@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5258
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/products",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5258
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/product/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PUT" ]
+    }
+  ]
+}
